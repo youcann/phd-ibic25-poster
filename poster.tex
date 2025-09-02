@@ -28,6 +28,7 @@
 	 {\footnotesize\begin{enumerate}[nosep,label={[}\arabic*{]}]
 	 \item S. Hiramatsu et. al., ``Measurement of Small Beam Size by the Use of SR Interferometer'',\newline in Proc. Particle Accel. Conf., New York, USA, 1999, pp. 492-494
 	 \item L. Torino and U. Iriso, ``Transverse beam profile reconstruction using synchrotron radiation interferometry'',\newline \texttt{doi: 10.1103/PhysRevAccelBeams.19.122801}
+	 \item B. Kehrer et. al., ``Visible Light Diagnostics at the ANKA Storage Ring''\newline\texttt{doi:10.18429/JACoW-IPAC2015-MOPHA0371}
 	 \item M. Patil et al., ``Application of KALYPSO as a diagnostic tool for beam and spectral analysis'',\newline \texttt{doi: 10.18429/JACoW-IPAC2021-WEPAB331}
 	 \end{enumerate}} &
 	  \textbf{Acknowledgments} \newline 
@@ -39,7 +40,7 @@
 }                  
 
 \def\boxheight{200mm}           
-\def\boxsep{6mm}    
+\def\boxsep{5mm}    
 \begin{document}
 	\maketitle
 	\vspace{-40mm}
@@ -48,53 +49,54 @@
 	\begin{itemize}
 		\item Transverse modulation can increase beam size, thus reducing intra-beam scattering
 		\item KARA vertical beam size too small for crotch absorber set diffraction limit
-		\item Use double slit setup to convert size changes to contrast modulation\textsuperscript{[1]}
-		\item Sample these changes with fast (turn-by-turn) line camera KALYPSO\textsuperscript{[2]} to distinguish mere \textit{position} modulation from desired \textit{size} blow-up
+		\item Use double slit setup to convert size changes to contrast modulation $V$\textsuperscript{[1, 2]}
+		\item Conventionally, $V$ is measured with CMOS camera\textsuperscript{[3]}, $\Rightarrow$ low time resolution
+		\item Therefore sample with fast (turn-by-turn) line camera KALYPSO\textsuperscript{[4]} to distinguish mere \textit{position} modulation from desired \textit{size} blow-up
 	\end{itemize}
 \end{boxgrayw}
-\begin{boxgray2w}[\boxheight]{Measurement and Excitation Setup at KARA}{}
+\begin{boxgray2w}[\boxheight]{Excitation and Measurement Setup at KARA}{}
 	\begin{minipage}{250mm}
-		\includegraphics[height=170mm]{img/aufbau2.tikz}
+		\includegraphics[height=170mm]{img/aufbauModulation.tikz}
+	\end{minipage}
+	\begin{minipage}{250mm}
+		\includegraphics[height=170mm]{img/exSetup.tikz}
 	\end{minipage}
 \end{boxgray2w}
 \vskip\boxsep
-\begin{boxgray3w}[\boxheight]{Vertical Profile Measurements with/without Excitation(Sine, 11~W, 460~kHz), No Double Slit}{}
-	\includegraphics[height=80mm,width=360mm]{img/u.tikz}\;
-	\includegraphics[height=80mm,width=360mm]{img/m1.tikz}
-	
-	\includegraphics[height=95mm,width=726mm]{img/diff.tikz}\;
-\end{boxgray3w}
-\vskip\boxsep
-\begin{boxgrayw}[\boxheight]{Spectral Analysis}{}
-	\includegraphics[height=140mm,width=220mm]{img/spect3.tikz}
+\begin{boxgray2w}[\boxheight]{Characterization of the KALYPSO Turn-by-Turn(2.7~MHz) Line Camera}{}
+	\begin{minipage}[t]{230mm}
+		\includegraphics[height=130mm,width=225mm]{img/kalypsoSpect.tikz}\\
+		Response of one pixel to a beam modulation is measured without using the double slit
+	\end{minipage}\quad
+	\begin{minipage}[t]{230mm}
+		\includegraphics[height=130mm,width=225mm]{img/kalypsoSpectrum.tikz}\\
+		Spectral response measured with tungsten lamp and set of band-pass filters, averaged over \num{1000} frames and all pixels
+	\end{minipage}
+\end{boxgray2w}
+\begin{boxgrayw}[\boxheight]{Upcoming Upgrades}{}
 	\begin{itemize}
-		\item Calculate Periodograms of Pixel no. 40
-		\item Modulation and betatron tune detectable
+		\item Experiments show double slit measurements not possible due to (radiation-) damaged optics
+		
+		\vspace{5mm}
+		\includegraphics[width=145mm]{img/mirrorAndWindow.png}
+		\item Mirror and windows are to be replaced by new components
+		\item Old green bandpass filter is switched for NIR filter
 	\end{itemize}
 \end{boxgrayw}
-\begin{boxgrayw}[\boxheight]{Planned Optimizations}{}
-	\begin{itemize}
-		\item Optimizing double slit geometry
-		\item Calibrate KALYPSO to absolute units
-		\item Spectral response used to match double slit and optical bandpass filter
-		
-		\includegraphics[width=210mm,height=120mm]{img/spectralResponseKalypso.tikz}
-	\end{itemize}
+\vskip\boxsep
+\begin{boxgrayw}[\boxheight]{Double Slit}{}
+	\includegraphics[height=175mm,width=220mm]{img/ds.tikz}
+\end{boxgrayw}
+\begin{boxgrayw}[\boxheight]{Inverted Double Slit}{}
+	\includegraphics[height=175mm,width=220mm]{img/dsInverted.tikz}
 \end{boxgrayw}
 \begin{boxgrayw}[\boxheight]{Summary and Outlook}{}
 	\begin{itemize}
-		\item Detector and Modulation setup successfully commissioned
-		\item First test show working modulation scheme but double slit measurements not possible due to (radiation-) damaged optics
-		
-		\vspace{5mm}
-		\includegraphics[width=150mm]{img/mirrorAndWindow.png}
-		\item Mirror and windows need to be replaced
+		\item Feasibility of setup shown, however limited by the low-light conditions
+		\item Characterizations of KALYPSO show spectral response similarity to CMOS camera
+		\item Other geometries than the double slit, e.g. an inverted version, are studied
+		\item After KALYPSO setup is in operation, systematical studies of different accelerator operation modes(injection, energy ramp, ...) will be done
 	\end{itemize}
 \end{boxgrayw}
-
-%\tikz[remember picture, overlay] {%
-	%\draw [red,line width=0.1mm]
-	%(-4,-87.33) rectangle (80.05,31.5);
-%}%
 	
 \end{document}
