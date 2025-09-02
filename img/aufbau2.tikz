@@ -1,0 +1,61 @@
+﻿\begin{tikzpicture}[amp/.style = {regular polygon, regular polygon sides=3,
+              draw, fill=white, text width=1em,
+              inner sep=1mm, outer sep=0mm,
+              shape border rotate=-90}]
+
+\usetikzlibrary{shapes}
+\usetikzlibrary{arrows.meta}
+
+\def\lenscolor{blue!20}
+\def\slitcolor{black!20}
+\def\bpcolor{red!40}
+
+\draw[>-,very thick] (-0.6,-0.6) -- (-0.8,0) -- (0.15,3) -- (-0.1,4);
+\begin{scope}[xscale=-1]
+	\draw[>-,very thick] (-0.6,-0.6) -- (-0.8,0) -- (0.15,3) -- (-0.1,4);
+\end{scope}
+
+\draw[fill=\lenscolor] (0,0) ellipse [x radius=1,y radius=0.15];
+\draw[fill=\lenscolor] (0,3) ellipse [x radius=0.3,y radius=0.06];
+\draw[fill=green!20] (-0.5,4) rectangle (0.5,5);
+
+\draw[dotted,very thick] (-0.8,0) -- (-0.51,0.91) -- (1.2,1.4);
+\draw[dotted,very thick] (0.8,0) -- (0.26,1.70) -- (1.2,1.4);
+\draw[fill=blue!60,rotate around={45:(0.5,1.5)}] (-0.8,1.8) rectangle+(1.6,0.2);
+\draw[fill=green!20] (1.2,1.2) rectangle+(0.2,0.4);
+\draw[fill=\lenscolor] (0,0) ellipse [x radius=1,y radius=0.15];
+
+\draw[fill=\slitcolor] (-0.1,-0.4) rectangle (0.1,-0.3);
+\draw[fill=\slitcolor] (0.3,-0.4) rectangle (0.8,-0.3);
+\draw[fill=\slitcolor] (-0.3,-0.4) rectangle (-0.8,-0.3);
+
+\draw[fill=\bpcolor] (-0.8,0.4) rectangle (0.8,0.3);
+
+\draw[-{Latex[length=3mm, width=3mm]}] (-5.2,0.35) node[anchor=south west]{Optical Bandpass Filter} -- (-0.9,0.35);
+\draw[-{Latex[length=3mm, width=3mm]}] (-5.2,1.6) node[anchor=south west]{Removable Mirror} -- (-0.6,1.6);
+\draw[-{Latex[length=3mm, width=3mm]}] (-5.2,-0.35) node[anchor=south west]{Removable Double Slit} -- (-0.9,-0.35);
+
+\draw [decorate,decoration={brace,amplitude=10pt,mirror,raise=4ex}]
+  (0,5) -- (0,2.9) node[midway,xshift=-7cm,align=left]{CMOS Camera\\with Macro Lens};
+\draw[{Latex[length=3mm, width=3mm]}-] (1.65,1.4)  -- (5,1.4) node[anchor=south east,align=left]{KALYPSO\\on 6DoF Hexapod};
+\draw[{Latex[length=3mm, width=3mm]}-] (1.65,0)  -- (5,0) node[anchor=south east,align=left,]{Main Lens\\($f=\SI{300}{\mm}$)};
+
+
+\draw[dotted] (5.5,5) -- (5.5,-1);
+
+
+\begin{scope}[shift={(7,0)}]
+\draw[very thick,fill=white] (0,0) rectangle (4,1);
+\node (amp) [amp,right,rotate=-90] at(0.4,3){A};
+\node[minimum height=1cm,minimum width=2cm,align=center,draw,fill=white] (sg) at (0.4,4) {Signal\\Generator};
+\draw (sg) -- (amp) -- (0.4,2) -- +(0,-1.2) -- (3.6,0.8) -- (3.6,1.8) node [minimum width=0.3cm,minimum height=1cm,draw,fill=white,inner sep=0] (R) {} -- (3.6,2.5) -- +(0.15,0) -- +(-0.15,0);
+\draw[{Latex[length=5mm, width=2mm]}-,blue!50!black, very thick] (-0.5,0.5) node[xshift=2cm,anchor=north west,font=\footnotesize]{Electron Beam}  -- (4.5,0.5) ;
+
+%\node[align=left] at(0,3) {Power\\Amplifier (250 W)};
+%\node[align=left] at(5,1.8) {Terminating\\Resistor};
+\node[align=left] at(2,-0.5) {Beam Pipe};
+\node[align=left] at(2,1.2) {Strip Line};
+\end{scope}
+
+
+\end{tikzpicture}

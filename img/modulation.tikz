@@ -1,0 +1,22 @@
+﻿\begin{tikzpicture}[amp/.style = {regular polygon, regular polygon sides=3,
+              draw, fill=white, text width=1em,
+              inner sep=1mm, outer sep=0mm,
+              shape border rotate=-90}
+                        ]
+\usetikzlibrary{shapes}
+
+\draw[very thick] (0,0) rectangle (4,1);
+
+\node (amp) [amp,right] at(-2,2){A};
+\node[minimum height=1cm,minimum width=2cm,align=center,draw] (sg) at (-4,2) {Signal\\Generator};
+
+\draw (sg) -- (amp) -- (0.4,2) -- +(0,-1.2) -- (3.6,0.8) -- (3.6,1.8) node [minimum width=0.3cm,minimum height=1cm,draw,fill=white,inner sep=0] (R) {} -- (3.6,2.5) -- +(0.15,0) -- +(-0.15,0);
+
+\draw[<-,blue!50!black, very thick] (-5,0.5) node[xshift=0.2cm,anchor=south west]{Electron Beam}  -- (5,0.5) ;
+
+\node[align=left] at(0,3) {Power\\Amplifier (250 W)};
+\node[align=left] at(5,1.8) {Terminating\\Resistor};
+\node[align=left] at(2,-0.5) {Beam Pipe};
+\node[align=left] at(2,1.2) {Strip Line};
+
+\end{tikzpicture}

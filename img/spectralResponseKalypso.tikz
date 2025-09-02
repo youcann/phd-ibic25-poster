@@ -1,0 +1,34 @@
+﻿% Recommended preamble:
+\begin{tikzpicture}
+%\pgfplotsset{every axis/.append style={
+%                    label style={font=\huge},
+%                    tick label style={font=\large}  
+%                    }}
+
+\begin{axis}[ylabel={Spectral sensitivity\\ (arb. units)},ylabel style={align=center},
+,xlabel={Wavelength (nm)},
+xmin=400,
+xmax=1800,
+xtick distance=400,
+axis background/.style={fill=white},
+label style={font=\footnotesize},
+tick  label style={font=\footnotesize}
+]
+    
+\addplot+[mark options={fill=black,scale=1.5},color={black}, very thick,error bars/.cd,
+            y dir=both,y fixed=100,]
+        coordinates {
+(400,252.56359439259626)
+(450,359.0070042262235)
+(500,465.13074419462293)
+(550,486.68618944464293)
+(600,555.6872533252695)
+(650,1034.496920124429)
+(700,883.1772182115815)
+(750,1104.8157500452771)
+(800,1196.5764451830225)
+(1050,88.70615867864731)
+(1750,8.015105700286085)
+};
+\end{axis}
+\end{tikzpicture}
