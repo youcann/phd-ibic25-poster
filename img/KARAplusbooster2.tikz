@@ -1,6 +1,0 @@
-﻿\begin{tikzpicture}
-\node {\includegraphics[height=0.8\textheight]{img/KARAplusbooster2.png}};
-
-\node[anchor=east,font=\huge] at (-13,1) {SLMII Port};
-\node[anchor=west,font=\huge] at (4.6,-7.4) {VLD Port};
-\end{tikzpicture}
