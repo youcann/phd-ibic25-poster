@@ -21,6 +21,12 @@ legend style={font=\footnotesize}
 ]
 \addplot graphics [includegraphics cmd=\pgfimage,xmin=0, xmax=1919, ymin=0, ymax=1079] {img/basler1v.png};
 
+\draw[fill=black] (420,680) rectangle (520,780);
+\draw[fill=white] (450,700) rectangle (460,760);
+\draw[fill=white] (480,700) rectangle (490,760);
+\node[align=center,anchor=center,font=\tiny,white] at (470,645) {Mask};
+
+
 \addplot [thick, white]
 coordinates {%
 (0,0.7546296296296297)

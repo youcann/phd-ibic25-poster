@@ -19,6 +19,7 @@ label style={font=\footnotesize},
 tick  label style={font=\footnotesize},
 legend style={font=\footnotesize}
 ]
+
 \addplot graphics [includegraphics cmd=\pgfimage,xmin=0, xmax=1919, ymin=0, ymax=1079] {img/basler2v.png};
 \addplot [thick, white]
 coordinates {%
@@ -1943,6 +1944,11 @@ coordinates {%
 (1918,0.725925925925926)
 (1919,0.825925925925926)
 };
+
+\draw[fill=white] (420,680) rectangle (520,780);
+\draw[fill=black] (450,680) rectangle (460,780);
+\draw[fill=black] (480,680) rectangle (490,780);
+\node[align=center,anchor=center,font=\tiny,white] at (470,645) {Mask};
 \end{axis}
 
 \end{tikzpicture}

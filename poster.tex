@@ -48,13 +48,13 @@
 	\begin{boxgrayw}[\boxheight]{Motivation}{}
 	\begin{itemize}
 		\item Transverse modulation can increase beam size, thus reducing intra-beam scattering
-		\item KARA vertical beam size too small for crotch absorber set diffraction limit
-		\item Use double slit setup to convert size changes to contrast modulation $V$\textsuperscript{[1, 2]}
-		\item Conventionally, $V$ is measured with CMOS camera\textsuperscript{[3]}, $\Rightarrow$ low time resolution
+		\item KARA vertical beam size smaller than diffraction limit
+		\item Use double slit setup to convert size changes into contrast modulation $V$\textsuperscript{[1, 2]}
+		\item In existing setup, $V$ is measured with CMOS camera\textsuperscript{[3]}, $\Rightarrow$ low time resolution
 		\item Therefore sample with fast (turn-by-turn) line camera KALYPSO\textsuperscript{[4]} to distinguish mere \textit{position} modulation from desired \textit{size} blow-up
 	\end{itemize}
 \end{boxgrayw}
-\begin{boxgray2w}[\boxheight]{Excitation and Measurement Setup at KARA}{}
+\begin{boxgray2w}[\boxheight]{Transverse Beam Excitation and Measurement Setup at KARA}{}
 	\begin{minipage}{250mm}
 		\includegraphics[height=170mm]{img/aufbauModulation.tikz}
 	\end{minipage}
@@ -70,7 +70,7 @@
 	\end{minipage}\quad
 	\begin{minipage}[t]{230mm}
 		\includegraphics[height=130mm,width=225mm]{img/kalypsoSpectrum.tikz}\\
-		Spectral response measured with tungsten lamp and set of band-pass filters, averaged over \num{1000} frames and all pixels
+		Spectral response measured with tungsten lamp and set of band-pass filters; Averaged over \num{1000} frames and all pixels
 	\end{minipage}
 \end{boxgray2w}
 \begin{boxgrayw}[\boxheight]{Upcoming Upgrades}{}
@@ -78,9 +78,11 @@
 		\item Experiments show double slit measurements not possible due to (radiation-) damaged optics
 		
 		\vspace{5mm}
-		\includegraphics[width=145mm]{img/mirrorAndWindow.png}
-		\item Mirror and windows are to be replaced by new components
-		\item Old green bandpass filter is switched for NIR filter
+		\begin{center}
+			\includegraphics[width=145mm]{img/mirrorAndWindow.png}
+		\end{center}
+		\item Mirror and windows are to be replaced
+		\item Old green bandpass filter is switched for NIR(e.g. \qty{850}{\nm}) filter
 	\end{itemize}
 \end{boxgrayw}
 \vskip\boxsep
